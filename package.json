@@ -1,0 +1,11 @@
+{
+  "name": "my-monorepo",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm --workspace apps/web run dev\" \"npm --workspace apps/api run dev\""
+  }
+}
