@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { authAPI } from '../services/api';
 import { TransactionResponse } from '../types/auth';
-import Navbar from '../components/NavBar';
 
 const Dashboard = () => {
 	const [transactions, setTransactions] = useState<TransactionResponse[]>([]);
@@ -24,7 +23,6 @@ const Dashboard = () => {
 
 	return (
 		<div className='dashboard-container'>
-			<Navbar />
 			<div
 				style={{
 					display: 'flex',

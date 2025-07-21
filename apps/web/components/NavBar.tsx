@@ -5,7 +5,7 @@ const Links = ({ links }) => {
 	const handleLogout = () => {
 		if (typeof window !== 'undefined') {
 			localStorage.removeItem('token');
-			router.replace('/');
+			router.replace('/login');
 		}
 	};
 
@@ -21,7 +21,7 @@ const Links = ({ links }) => {
 				style={{ width: 'auto', padding: '0px 18px' }}
 				onClick={handleLogout}
 			>
-				Logout
+				Login
 			</div>
 		</div>
 	);

@@ -32,22 +32,16 @@ export interface AuthError {
 	error: string;
 	attemptsRemaining?: number;
 }
-
 export interface TransactionRecipient {
 	name: string;
 	email: string;
 }
-
-export interface Transaction {
+export interface TransactionResponse {
 	reference_id: string;
 	transaction_date: string;
 	transaction_recipient: TransactionRecipient;
 	transaction_type: string;
 	transaction_amount: number;
-}
-
-export interface TransactionResponse {
-	transactions: Transaction[];
 }
 
 export type AuthStep =
